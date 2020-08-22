@@ -28,16 +28,14 @@ const calcCash = (data, own = 0) => {
 }
 
 let lesson = calcCash(data.cash);
-// director, teacher = 'Максим', allModule, gang, course
-function makeBusiness(...args) {
+
+function makeBusiness(director, allModule, gang, course, teacher = 'Максим') {
 	const sumTech = data.react.concat(data.add, 'и другие');
-	console.log(`
-		Стартуем новый курс: "${course}". Владелец: ${director}, преподаватель: ${teacher}.
-		Всего уроков: ${allModule}. Команда Академии: ${gang.join(', ')}.
-		Первое что изучим будет "${data.react[0]}". Он очень похож на HTML!
-		Технологии которые мы изучим: ${sumTech.join(', ')}
-		`
+	console.log(`\tСтартуем новый курс: "${course}". Владелец: ${director}, преподаватель: ${teacher}.
+	Всего уроков: ${allModule}. Команда Академии: ${gang.join(', ')}.
+	Первое что изучим будет "${data.react[0]}". Он очень похож на HTML!
+	Технологии которые мы изучим: ${sumTech.join(', ')}`
 		);
 }
 
-makeBusiness(['Артем', , lesson, command, nameCourse]);
+makeBusiness('Артем', lesson, command, nameCourse);
